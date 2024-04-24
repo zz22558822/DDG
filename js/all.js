@@ -48,7 +48,7 @@ document.querySelector('.btn').addEventListener('click', function () {
     <key>PayloadDisplayName</key>
     <string>ChekDNS</string>
     <key>PayloadDescription</key>
-    <string>此服務創建於 Chek. -${date.toISOString().split('T')[0]}</string>
+    <string>此服務創建於 Chek. ${date.toISOString().split('T')[0]}</string>
     <key>PayloadIdentifier</key>
     <string>io.nextdns.${convertToLowerCase(capital.checked ? XXS(defaultData) : XXS(ProfileText.value))}.profile</string>
     <key>PayloadScope</key>
