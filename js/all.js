@@ -111,7 +111,7 @@ document.querySelector('.btn').addEventListener('click', function () {
 
 
     // 創建 Blob 對象，將內容放入其中
-    let blob = new Blob([content], { type: 'text/plain' });
+    let blob = new Blob([content], { type: 'application/octet-stream' });
 
     // 創建一個 URL 將 Blob 連接起來
     let url = URL.createObjectURL(blob);
