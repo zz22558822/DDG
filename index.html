@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>DNS 描述檔產生器</title>
+
+    <!-- 這邊放上Icon -->
+    <link rel="icon" href="images/logo.png">
+
+    <!-- 防止瀏覽器使用快取 正常來說應該是會直接資料異動後刷新狀態200 否則從快取304 -->
+    <meta HTTP-EQUIV="Pragma" CONTENT="no-store">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+    <meta HTTP-EQUIV="Expires" CONTENT="0">
+
+
+    <meta name="author" content="chek">
+    <meta name="copyright" content="chek">
+    <meta name="generator" content="chek">
+    <meta name="description" content="DNS 描述檔">
+    <meta name="keywords" content="DNS 描述檔">
+
+    <meta property="og:title" content="DNS 描述檔">
+    <meta property="og:description" content="DNS 描述檔">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="#">
+    <!-- 這邊放上Icon -->
+    <meta property="og:image" href="images/logo.png">
+    <!-- 這邊放上Icon -->
+    <link href="images/logo.png" rel="apple-touch-icon" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="scss/style.css">
+
+
+</head>
+
+<body>
+  
+
+  <div class="wrap">
+
+    <div class="header">
+      <img src="images/settings.png" alt="Logo">
+      <h1>DNS 描述檔產生器</h1>
+    </div>
+
+    <div class="container">
+      <h2>請輸入六位數驗證碼 :</h2>
+      <input class="ProfileText" type="text" maxlength="6" placeholder="請輸入六位數驗證碼" pattern="^[a-zA-Z0-9]*$" autofocus="">
+      <h2>請輸入裝置顯示名稱 :</h2>
+      <input class="NameText" type="text" maxlength="20" placeholder="請輸入裝置顯示名稱" >
+      <div class="btns">
+        <div class="box">
+          <input type="checkbox" name="capital" id="capital">
+          <label for="capital">預設選項</label>
+        </div>
+        <input class="btn" type="button" value="開始編譯">
+      </div>
+      
+    </div>
+
+    <div class="footer">
+      <img src="images/Chek.png" alt="Chek-LOGO">
+      <p>Copyright © 2024</p>
+    </div>
+    
+
+
+  </div>
+
+  <div class="prompt-box">
+    <h3><span>請輸入六位數驗證碼，</span>切勿留空、使用特殊符號。</h3>
+    <a class="prompt-close" href="#">×</a>
+  </div>
+
+  
+
+<!--JS載入-->
+<script type="text/javascript" src="js/all.js"></script>
+
+</body>
+</html>

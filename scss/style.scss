@@ -1,0 +1,229 @@
+@import 'reset';
+@import './mixin/RWD';
+
+html,body{
+  font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+  background: #424242;
+}
+
+.wrap{
+  max-width: 1024px;
+  margin: 0 auto;
+
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: #121212;
+    color: #FFF;
+    img{
+      width: 50px;
+      margin: 0 5px;
+    }
+    h1{
+      font-size: 50px;
+      text-align: center;
+      font-weight: bold;
+      @include mobile-414{
+        font-size: 36px;
+      }
+    }
+    @include mobile-767{
+      padding: 30px 10px;
+    }
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 40px 0 60px;
+    background: #222222;
+    h2{
+      color: springgreen;
+      text-align: center;
+      font-size: 32px;
+      margin-top: 20px;
+      @include mobile-414{
+        font-size: 28px;
+      }
+    }
+    .ProfileText,.NameText{
+      width: 60%;
+      font-size: 30px;
+      font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+      margin: 20px 0;
+      padding: 10px 0;
+      text-align: center;
+      border-radius: 15px;
+      border: 3px solid #0d5904;
+      &:focus{
+        outline:none;
+        border: 3px solid #64cd51;
+      }
+      @include mobile-767{
+        width: 90%;
+      }
+      @include mobile-414{
+        font-size: 20px;
+      }
+    }
+    .NameText{
+      @include mobile-414{
+        font-size: 18px;
+        padding: 11px 0;
+      }
+    }
+    .btns{
+      width: 60%;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      @include mobile-767{
+        width: 90%;
+        margin-top: 10px;
+      }
+      @include mobile-414{
+        margin-top: 10px;
+      }
+      .box{
+        width: 40%;
+        font-size: 30px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 15px 0;
+        input{
+          width: 30px;
+          height: 30px;
+        }
+        label{
+          color: #FFF;
+        }
+        @include mobile-767{
+          width: 60%;
+        }
+      }
+      .btn{
+        width: 40%;
+        font-size: 30px;
+        font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+        background: seagreen;
+        border-radius: 10px;
+        border: none;
+        border: 2px solid seagreen;
+        padding: 5px;
+        transition: all 0.4s;
+        &:hover{
+          border: 2px solid #FFF;
+          color: #FFF;
+        }
+        &:active {
+          -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
+          transition: all 0.2s;
+        }
+        // 響應式設計
+        @include mobile-767 {
+          width: 100%;
+        }
+        @include mobile-767{
+          width: 100%;
+        }
+      }
+    }
+
+  }
+
+  .footer{
+    text-align: center;
+    background: #121212;
+    img{
+      margin: 20px 0 10px;
+      width: 200px;
+      @include mobile-767{
+        margin: 10px 0 5px;
+      }
+      @include mobile-414{
+        margin: 5px 0;
+      }
+    }
+    p{
+      text-align: center;
+      color: #AAA;
+      padding-bottom: 20px;
+      @include mobile-767{
+        padding-bottom: 10px;
+      }
+      @include mobile-414{
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+}
+
+.prompt-box.open-box{
+  /* 這邊設置定位讓P段落可以垂直置中 */
+  display: block;
+  display: flex;
+  align-items: center;
+}
+
+.prompt-box{
+  display: none;
+  width: 50%;
+  height: 60%;
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+  margin-left: -25%;
+  margin-bottom: -15%;
+  background: #000;
+  border: 5px solid grey;
+  @include mobile-767{
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  h3{
+    font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+    color: #00CC99;
+    font-size: 36px;
+    text-align: center;
+    line-height: 2em;
+    /* 這邊設置定位讓P段落可以水平置中 */
+    margin: 0 auto;
+    transition: all 0.8s;
+    @include mobile-767{
+      span{
+        display: block;
+      }
+    }
+  }
+  .prompt-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFF;
+    background: red;
+    font-size: 600%;
+    padding: 0 0.2em;
+    transition: all 0.8s;
+    &:hover{
+      color: grey;
+      background: #FFF;
+      transition: all 0.8s;
+    }
+  }
+
+}
